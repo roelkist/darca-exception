@@ -1,92 +1,161 @@
-Contributing to Darca File Utils
-================================
+=======================================
+Contributing to Darca Exception
+=======================================
 
-We welcome contributions from the community! This document outlines the guidelines for contributing
-to Darca File Utils, including setting up your development environment, coding standards, and the
-process for submitting pull requests.
+Thank you for considering contributing to **Darca Exception**!  
+Contributions help make this project better, and we welcome **bug reports, feature requests, and pull requests**.  
 
-Getting Started
----------------
+---
 
-1. **Fork the Repository:**  
-   Visit https://github.com/roelkist/darca-file-utils and fork the project to your own GitHub account.
+🚀 **How to Contribute**
+--------------------
+We welcome contributions in the following ways:
 
-2. **Clone Your Fork:**  
-   Clone the repository locally:
+- **Report Bugs** – If you find an issue, please report it under `Issues`.
+- **Request Features** – Have a great idea? Open a feature request!
+- **Submit Pull Requests** – Help improve the project by fixing bugs or adding enhancements.
+
+---
+
+🔍 **Reporting Bugs**
+--------------------
+If you find a bug, please check the `Issues` tab to see if it has already been reported.  
+If not, create a new issue with the following details:
+
+1. **Describe the bug** – What is happening?
+2. **Steps to reproduce** – How can we reproduce the bug?
+3. **Expected behavior** – What should happen instead?
+4. **Screenshots or logs (if applicable)** – Helps us understand the issue better.
+5. **Environment details** – Python version, OS, etc.
+
+📌 **Submit your bug report here:**  
+`https://github.com/roelkist/darca-exception/issues`
+
+---
+
+💡 **Requesting Features**
+--------------------
+Have an idea to improve the project? Submit a **Feature Request** with:
+
+1. **Feature description** – Explain your idea clearly.
+2. **Use case** – How would this help users?
+3. **Potential implementation** (if possible) – Any thoughts on how to add it?
+
+📌 **Submit your feature request here:**  
+`https://github.com/roelkist/darca-exception/issues`
+
+---
+
+🛠 **Submitting a Pull Request (PR)**
+--------------------
+### **1. Fork & Clone**
+First, clone the repository:
+
+.. code-block:: bash
+
+    git clone https://github.com/roelkist/darca-exception.git
+    cd darca-exception
+
+### **2. Create a New Branch**
+Always create a new branch for your contribution:
+
+.. code-block:: bash
+
+    git checkout -b feature/new-exception-handler
+
+### **3. Install Dependencies**
+Set up your environment:
+
+.. code-block:: bash
+
+    make install
+
+### **4. Make Your Changes**
+- Follow the project’s coding style.
+- Ensure your code is **well-documented** and **tested**.
+
+### **5. Run Pre-Commit & Tests**
+Before submitting, ensure everything is correctly formatted and tested:
+
+.. code-block:: bash
+
+    make check  # Formats, runs pre-commit, and tests
+
+### **6. Commit and Push**
+Commit your changes with a meaningful message:
+
+.. code-block:: bash
+
+    git add .
+    git commit -m "Add new exception type for better error handling"
+    git push origin feature/new-exception-handler
+
+### **7. Open a Pull Request**
+- Go to the repository on GitHub.
+- Click "New Pull Request".
+- Select your branch and submit the PR.
+
+**PR Guidelines:**
+- **Reference the related issue (if applicable).**
+- **Explain what your PR does and why it's needed.**
+- **Include test results/screenshots if relevant.**
+
+---
+
+✅ **Code Guidelines**
+--------------------
+To maintain code consistency, follow these guidelines:
+
+1. **Formatting** – Code should be formatted using `black` and `isort`:
    
    .. code-block:: bash
 
-      git clone https://github.com/your-username/darca-file-utils.git
-      cd darca-file-utils
+       make format
 
-3. **Create a Feature Branch:**  
-   Create a new branch for your feature or bug fix:
-   
-   .. code-block:: bash
-
-      git checkout -b feature/your-feature-name
-
-4. **Set Up Your Environment:**  
-   Create and activate a virtual environment, then install development dependencies:
-   
-   .. code-block:: bash
-
-      python -m venv venv
-      source venv/bin/activate  # On Windows: venv\Scripts\activate
-      pip install -r requirements-dev.txt
-
-Coding Standards and Testing
-----------------------------
-
-- **Formatting and Linting:**  
-  The project uses Black for code formatting and Flake8 for linting. To check your code, run:
-
-  .. code-block:: bash
-
-      tox -e lint
-
-- **Running Tests:**  
-  Ensure that all tests pass by running:
-
-  .. code-block:: bash
-
-      tox
-
-- **Pre-commit Hooks:**  
-  Pre-commit hooks are configured to enforce code quality before commits. Install them with:
-
-  .. code-block:: bash
-
-      pre-commit install
-
-  And run them manually with:
-
-  .. code-block:: bash
-
-      pre-commit run --all-files
-
-Submitting a Pull Request
--------------------------
-
-1. **Push Your Branch:**  
-   Once your changes are ready, push your branch to your fork:
+2. **Linting & Static Analysis** – Run `pre-commit` before pushing:
 
    .. code-block:: bash
 
-      git push origin feature/your-feature-name
+       make precommit
 
-2. **Open a Pull Request:**  
-   On GitHub, open a pull request against the ``main`` branch of the upstream repository.
-   Include a clear description of your changes and reference any related issues.
+3. **Testing** – Ensure all tests pass:
 
-3. **Review Process:**  
-   The maintainers will review your pull request and may request changes or merge it after
-   approval.
+   .. code-block:: bash
 
-Reporting Issues
-----------------
+       make test
 
-If you encounter any bugs or have feature requests, please open an issue on the GitHub repository
-with a detailed description of the problem or enhancement.
+4. **Keep Changes Focused** – PRs should be **small and focused** on one feature or bug fix.
 
-Thank you for contributing to Darca File Utils!
+---
+
+📖 **Documentation Contributions**
+--------------------
+If you're improving documentation:
+
+- Edit the RST files in `docs/source/`.
+- Run:
+
+  .. code-block:: bash
+
+      make docs
+
+- Open a PR with your improvements!
+
+---
+
+🗑 **Cleaning Up**
+--------------------
+To remove virtual environments and reset dependencies:
+
+.. code-block:: bash
+
+    make clean
+
+---
+
+🎉 **Thank You!**
+--------------------
+Your contributions make **Darca Exception** better for everyone! 🚀  
+Feel free to ask questions or discuss improvements in the **Issues** section.
+
+---

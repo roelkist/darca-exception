@@ -1,5 +1,7 @@
+import json
 import traceback
-from darca_log_facility import DarcaLogger
+
+from darca_log_facility.logger import DarcaLogger
 
 
 class DarcaException(Exception):
@@ -33,6 +35,12 @@ class DarcaException(Exception):
         """
         logger = DarcaLogger("darca-exception").get_logger()
 
+        # Ensure the logger is part of Python's default logging system
+        if not logger.handlers:
+            import logging
+
+            logger.addHandler(logging.StreamHandler())
+
         log_entry = {
             "error_code": self.error_code,
             "message": self.message,
@@ -41,7 +49,9 @@ class DarcaException(Exception):
             "stack_trace": traceback.format_exc(),
         }
 
-        logger.error(log_entry)  # Structured logging without JSON dumping
+        logger.error(
+            json.dumps(log_entry)
+        )  # Ensure Python logging captures this
 
     def to_dict(self):
         """
@@ -68,5 +78,7 @@ class DarcaException(Exception):
         """
         Official string representation.
         """
-        return f"DarcaException(error_code={self.error_code}, message={self.message})"
-
+        return (
+            f"DarcaException(error_code={self.error_code}, "
+            f"message={self.message})"
+        )

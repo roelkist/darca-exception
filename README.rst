@@ -1,6 +1,6 @@
-=======================================
+=============================================
 Darca Exception - Advanced Exception Handling
-=======================================
+=============================================
 
 Darca Exception is a powerful and feature-rich Python exception base class designed to enhance error handling in your projects. 
 It integrates seamlessly with `darca-log-facility` for structured logging, making debugging and error tracking effortless.
@@ -64,7 +64,7 @@ Converting an exception to JSON is simple:
 ---
 
 🛠 **Development & Testing**
---------------------
+----------------------------
 ### **Running Tests**
 To run the test suite and check coverage:
 
@@ -98,7 +98,7 @@ This will:
 ---
 
 📖 **Building Documentation**
---------------------
+-----------------------------
 To generate documentation using Sphinx:
 
 .. code-block:: bash
@@ -111,7 +111,7 @@ This will:
 ---
 
 🚀 **Pre-Commit Hooks**
---------------------
+-----------------------
 To run pre-commit checks before committing code:
 
 .. code-block:: bash
@@ -125,7 +125,7 @@ This will:
 ---
 
 🔧 **Adding Dependencies**
---------------------
+--------------------------
 You can dynamically add dependencies using `make`:
 
 - **Development dependencies** (`dev` group):
@@ -143,7 +143,7 @@ You can dynamically add dependencies using `make`:
 ---
 
 🗑 **Cleaning Up**
---------------------
+-----------------
 To remove the virtual environment and reset dependencies:
 
 .. code-block:: bash
@@ -157,7 +157,7 @@ This will:
 ---
 
 💡 **Contributing**
---------------------
+-------------------
 Contributions are welcome! You can contribute by:
 
 - **Submitting feature requests**  
@@ -172,13 +172,13 @@ Before submitting a pull request, make sure to:
 ---
 
 📜 **License**
---------------------
+---------------
 This project is licensed under the MIT License. See `LICENSE` for details.
 
 ---
 
 🎉 **Final Notes**
---------------------
+-------------------
 This project is production-ready and **fully tested**. 🚀  
 If you find any issues, feel free to submit a bug report!
 

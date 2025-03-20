@@ -15,11 +15,11 @@ import sys
 
 sys.path.insert(0, os.path.abspath("../../"))
 
-from src.darca_log_facility.__version__ import author, copyright, version
+from src.darca_exception.__version__ import author, copyright, version
 
 # -- Project information -----------------------------------------------------
 
-project = "DARCA's logging facility."
+project = "DARCA's exception module."
 copyright = copyright
 author = author
 

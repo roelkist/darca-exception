@@ -1,5 +1,6 @@
 import pytest
-from darca_log_facility import DarcaLogger
+from darca_log_facility.logger import DarcaLogger
+
 
 @pytest.fixture(scope="session")
 def test_logger():
