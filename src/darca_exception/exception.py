@@ -52,7 +52,6 @@ class DarcaException(Exception):
         logger.error(
             json.dumps(log_entry)
         )  # Ensure Python logging captures this
-
     def to_dict(self):
         """
         Convert exception details to a dictionary.
