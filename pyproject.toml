@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "darca-exception"
-version = "0.1.0"
+version = "0.1.1"
 description = "Exception module for reuse along projects."
 authors = ["Roel Kist <roel.kist@gmail.com>"]
 license = "LICENSE"
